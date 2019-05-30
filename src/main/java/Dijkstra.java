@@ -36,7 +36,7 @@ public class Dijkstra {
 
         for (int count = 1; count < n; count++) { // 要加入n-1个顶点
             int k = -1; // 选出一个距离初始顶点start最近的未标记顶点
-            int dmin = Integer.MAX_VALUE;
+            int dmin = Integer.MAX_VALUE; // 最近距离
             for (int i = 0; i < n; i++) {
                 if (visited[i] == 0 && weight[start][i] < dmin) {
                     dmin = weight[start][i];
