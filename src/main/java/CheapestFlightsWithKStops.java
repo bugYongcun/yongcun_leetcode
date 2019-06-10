@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class Solution1 {
     int findCheapestPrice(int n, int[][] flights, int src, int dst, int K) {
         List<int[]>[] priceList = new ArrayList[n];
         List<Integer> routeList = new LinkedList<>();
@@ -56,7 +56,7 @@ public class CheapestFlightsWithKStops {
         int dst = 4;
         int K = 2;
 
-        int ret = new Solution().findCheapestPrice(n, flights, src, dst, K);
+        int ret = new Solution1().findCheapestPrice(n, flights, src, dst, K);
 
         String out = String.valueOf(ret);
 
