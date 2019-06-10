@@ -152,9 +152,7 @@ class Dijk {
             costMap.put(city, Integer.MAX_VALUE);
             stopMap.put(city, Integer.MAX_VALUE);
         }
-        Queue<Point> pq = new PriorityQueue<>((o1, o2) -> {
-            return Integer.compare(o1.cost, o2.cost);
-        });
+        Queue<Point> pq = new PriorityQueue<>(Comparator.comparingInt(o -> o.cost));
         pq.offer(new Point(from, 0, 0, null));
         while (!pq.isEmpty()) {
             Point curr = pq.poll();
