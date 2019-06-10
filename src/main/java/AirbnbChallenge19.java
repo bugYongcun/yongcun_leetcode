@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class AirbnbChallenge19 {
-    public static String parseCsv(String str) {
+    private static String parseCsv(String str) {
         List<String> line = new ArrayList<>();
         StringBuilder sb = new StringBuilder();
         boolean quote = false;
@@ -34,10 +34,8 @@ public class AirbnbChallenge19 {
             i++;
 
             if (i == str.length()) {
-                if (!sb.toString().equals("")) {
-                    line.add(sb.toString());
-                    sb.delete(0, sb.length());
-                }
+                line.add(sb.toString());
+                sb.delete(0, sb.length());
             }
         }
 
