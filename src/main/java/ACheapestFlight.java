@@ -80,11 +80,11 @@ class DFS {
             this.costMap.put(city, Integer.MAX_VALUE);
             this.stopMap.put(city, Integer.MAX_VALUE);
         }
-        dfs(new HashSet<>(), new ArrayList<>(), from, to, k,-1, 0);
+        dfs(new HashSet<>(), new ArrayList<>(), from, to, k, -1, 0);
         return minCost == Integer.MAX_VALUE ? -1 : this.minCost;
     }
 
-    private void dfs(Set<String> visited, List<String> curPath, String cur, String to, int k, int stop,  int cost) {
+    private void dfs(Set<String> visited, List<String> curPath, String cur, String to, int k, int stop, int cost) {
         if (stop > k || visited.contains(cur)) {
             return;
         }
