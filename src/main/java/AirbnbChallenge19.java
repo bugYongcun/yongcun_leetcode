@@ -39,29 +39,22 @@ public class AirbnbChallenge19 {
             }
         }
 
-        if (line.size() == 7)
-            return line.get(0) + ", " + line.get(6) + " years old, is from " + line.get(5) + " and is interested in " + line.get(3) + ".";
-        else
-            return "";
+        return line.toString();
+
     }
 
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-        Scanner sc = new Scanner(System.in);
+        String str = "\"1,\"\"\"\"3\"\"\"\"\"";
 
         List<String> result = new ArrayList<>();
 
-        while (sc.hasNext()) {
-            String str = sc.nextLine();
-            String res = parseCsv(str);
-            result.add(res);
-        }
+        String res = parseCsv(str);
+        result.add(res);
 
         for (String s : result) {
             System.out.println(s);
         }
-
-        sc.close();
     }
 }
 
