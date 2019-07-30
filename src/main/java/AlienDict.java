@@ -51,7 +51,7 @@ public class AlienDict {
 
     public static void main(String[] args) {
         AlienDict sol = new AlienDict();
-        List<String> words = Arrays.asList("aa", "ab", "ac", "bb");
+        List<String> words = Arrays.asList("aa", "ab", "ac", "bbd");
         System.out.println(sol.findOrder(words));
     }
 
