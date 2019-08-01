@@ -170,6 +170,22 @@ public class LeetCodeTree {
         return q;
     }
 
+    private static boolean getSumRoad(TreeNode node, int sum) {
+        if (node == null)
+            return false;
+
+        sum -= node.val;
+        if ((node.left == null) && (node.right == null))
+            return (sum == 0);
+
+        if (getSumRoad(node.left, sum))
+            return true;
+        else if (getSumRoad(node.right, sum))
+            return true;
+
+        return false;
+    }
+
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
@@ -179,6 +195,6 @@ public class LeetCodeTree {
         root.right.right = new TreeNode(6);
         root.right.left.left = new TreeNode(7);
         root.right.left.right = new TreeNode(8);
-        System.out.println(levelOrder(root));
+        System.out.println(getSumRoad(root, 16));
     }
 }
