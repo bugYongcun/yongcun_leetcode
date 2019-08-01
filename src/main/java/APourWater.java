@@ -22,7 +22,7 @@ class APourWater {
     public static void main(String[] args) {
         APourWater sol = new APourWater();
         int[] heights = {4, 5, 6, 1, 3, 5, 4};
-        sol.pourWater(heights, 5, 14);
+        sol.pourWater(heights, 3, 14);
     }
 
     public void pourWater(int[] heights, int index, int k) {
